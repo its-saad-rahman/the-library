@@ -12,9 +12,18 @@
   --clr-add-book-gradient-1: hsl(267, 33%, 39%);
   --clr-add-book-gradient-1: hsl(224, 30%, 45%);
 
+  --ff-primary: 'Saira Condensed', sans-serif;
+  --ff-secondary: 'Josefin Sans', sans-serif;
+
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+  --fs-100: 1rem;
+  --fs-200: 1.25rem;
+  --fs-300: 2rem;
+
   --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  --ff-josefin: 'Josefin Sans', sans-serif;
-  --ff-saita: 'Saira Condensed', sans-serif;
 }
 
 /*========================================
@@ -45,6 +54,8 @@ dd {
 ul[role='list'],
 ol[role='list'] {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* Set core root defaults */
@@ -94,3 +105,18 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+/*========================================
+                CONTAINER
+ ========================================*/
+.container {
+  background: var(--clr-body-bg);
+  height: 100vh;
+  font-family: var(--ff-primary);
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+}
+
+/*========================================
+                NAVBAR
+ ========================================*/
