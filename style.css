@@ -10,7 +10,7 @@
   --clr-font: hsl(0, 3%, 85%);
   --clr-heading-font: hsl(174, 14%, 14%);
   --clr-add-book-gradient-1: hsl(267, 33%, 39%);
-  --clr-add-book-gradient-1: hsl(224, 30%, 45%);
+  --clr-add-book-gradient-2: hsl(224, 30%, 45%);
 
   --ff-primary: 'Saira Condensed', sans-serif;
   --ff-secondary: 'Josefin Sans', sans-serif;
@@ -26,6 +26,13 @@
   --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+/*========================================
+                Utility Class
+ ========================================*/
+
+.column-gap {
+  column-gap: 2.5rem;
+}
 /*========================================
                 CSS RESET 
  ========================================*/
@@ -115,8 +122,150 @@ select {
   font-family: var(--ff-primary);
   display: grid;
   grid-template-columns: 1fr 7fr;
+  gap: 1rem;
 }
 
 /*========================================
                 NAVBAR
  ========================================*/
+.navbar {
+  background: var(--clr-nav-bg);
+  display: grid;
+
+  align-items: center;
+}
+
+.navbar ul li a svg {
+  margin-right: 0.5em;
+}
+.navbar ul li a {
+  text-decoration: none;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color: white;
+  padding: 1em 1.9em;
+  border-bottom: 1px solid var(--clr-body-bg);
+  border-top: 1px solid var(--clr-body-bg);
+  max-width: 100%;
+  font-weight: 500;
+  font-size: var(--fs-100);
+  transition: background 350ms ease-in-out;
+}
+
+.navbar ul li a:hover {
+  background: var(--clr-status-bg);
+}
+
+/*========================================
+                Main
+ ========================================*/
+
+main {
+  display: grid;
+  grid-template-rows: 1fr 10fr;
+}
+/*========================================
+                HEADER
+ ========================================*/
+.header {
+  display: grid;
+  grid-template-columns: 8fr 2fr;
+  align-items: center;
+}
+.search-bar {
+  position: relative;
+}
+.search-bar input {
+  background: var(--clr-search-bg);
+  border: none;
+  width: 100%;
+  padding: 1em;
+  border-radius: 0.5em;
+  box-shadow: var(--box-shadow);
+}
+.search-bar svg {
+  color: white;
+  position: absolute;
+  top: 18px;
+  right: 25px;
+}
+
+/*========================================
+                CONTENT BODY
+ ========================================*/
+.content-body {
+  display: grid;
+}
+
+/*************** ADD BOOK *****************/
+/* .add-book {
+} */
+
+#form {
+  background: linear-gradient(
+    90deg,
+    var(--clr-add-book-gradient-1),
+    var(--clr-add-book-gradient-2)
+  );
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  box-shadow: var(--box-shadow);
+}
+form div {
+  display: flex;
+  flex-grow: 1;
+  /* gap: 40px; */
+}
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+.form-control label {
+  color: white;
+}
+.form-control input {
+  /* width: 550px; */
+  border: none;
+  padding: 1em;
+  border-radius: 0.5em;
+  background: hsla(0 0% 100% / 25%);
+}
+.form-control input::placeholder {
+  color: white;
+}
+.genre__form-control div:first-child {
+  flex-grow: 2.5;
+}
+.add-book__checkbox {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+input[type='checkbox'] {
+  border: none;
+  width: 20px;
+  height: 50px;
+  margin-right: 1em;
+}
+.add-book--btn {
+  align-self: end;
+  display: flex;
+  border: none;
+  border-radius: 15px;
+  padding: 1em 2em;
+  font-size: 1.2rem;
+  gap: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  color: white;
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.25);
+  background: var(--clr-recently-added-bg);
+  transition: background 350ms ease-in-out;
+}
+.add-book--btn:hover {
+  background: var(--clr-add-book-gradient-1);
+}
