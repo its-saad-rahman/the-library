@@ -196,6 +196,8 @@ main {
  ========================================*/
 .content-body {
   display: grid;
+  grid-template-columns: 8fr 2fr;
+  gap: 20px;
 }
 
 /*************** ADD BOOK *****************/
@@ -268,4 +270,50 @@ input[type='checkbox'] {
 }
 .add-book--btn:hover {
   background: var(--clr-add-book-gradient-1);
+}
+
+/*************** CURRENTLY READING *****************/
+.currently-reading .content {
+  background: var(--clr-currently-reading-bg);
+  border-radius: 15px;
+  overflow: hidden;
+}
+.currently-reading .content .title {
+  background: var(--clr-add-book-gradient-1);
+  padding: 0.2em 0.5em;
+  color: white;
+}
+.recently-add .content p,
+.currently-reading .content p {
+  font-size: var(--fs-200);
+  padding-left: 1em;
+}
+.currently-reading .content p:nth-child(2),
+.recently-add .content p:nth-child(2) {
+  padding-top: 1em;
+}
+
+.currently-reading .content p:last-child,
+.recently-add .content p:last-child {
+  padding-bottom: 1em;
+}
+
+/*************** RECENTLY ADD *****************/
+.recently-add {
+}
+
+.recently-add div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+.recently-add .content {
+  background: var(--clr-add-book-gradient-1);
+  border-radius: 15px;
+  overflow: hidden;
+}
+.recently-add .content .title {
+  background: var(--clr-currently-reading-bg);
+  padding: 0.2em 0.5em;
+  color: white;
 }
