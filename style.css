@@ -299,8 +299,6 @@ input[type='checkbox'] {
 }
 
 /*************** RECENTLY ADD *****************/
-.recently-add {
-}
 
 .recently-add div {
   display: grid;
@@ -315,5 +313,9 @@ input[type='checkbox'] {
 .recently-add .content .title {
   background: var(--clr-currently-reading-bg);
   padding: 0.2em 0.5em;
-  color: white;
+  color: blac;
+}
+
+.recently-add .content p {
+  color: var(--clr-font);
 }
