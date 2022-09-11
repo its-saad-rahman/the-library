@@ -113,11 +113,14 @@ select {
   }
 }
 
+body {
+  background: var(--clr-body-bg);
+}
+
 /*========================================
                 CONTAINER
  ========================================*/
 .container {
-  background: var(--clr-body-bg);
   height: 100vh;
   font-family: var(--ff-primary);
   display: grid;
