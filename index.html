@@ -44,27 +44,27 @@
               <div class="column-gap">
                 <div class="form-control">
                   <label for="title">Title</label>
-                  <input type="text" placeholder="title of the book" />
+                  <input type="text" data-title placeholder="title of the book" />
                 </div>
                 <div class="form-control">
                   <label for="author">Author</label>
-                  <input type="text" placeholder="author name" />
+                  <input type="text" data-author placeholder="author name" />
                 </div>
               </div>
               <div class="column-gap">
                 <div class="form-control">
                   <label for="pages">Pages</label>
-                  <input type="text" placeholder="pages" />
+                  <input type="number" data-page placeholder="pages" />
                 </div>
                 <div class="form-control">
-                  <label for="published">Published</label>
-                  <input type="number" placeholder="published year" />
+                  <label for="published">Published Year</label>
+                  <input type="number" data-year placeholder="published year" />
                 </div>
               </div>
               <div class="genre__form-control column-gap">
                 <div class="form-control ">
                   <label for="genre">Genre</label>
-                  <input type="text" placeholder="pages" />
+                  <input type="text" data-genre placeholder="genre" />
                 </div>
                 <div class="form-control add-book__checkbox">
                   <input type="checkbox" />
@@ -95,6 +95,7 @@
                 Pages: <span class="pages">310</spancla></p>
               <p><!-- TODO: add icon -->
                 Published: <span class="published">1937</span></p>
+               
             </div>
           </div>
           <div class="recently-add">
@@ -102,15 +103,29 @@
            <div>
             <div class="content">
               <h1 class="title">The Hobbit</h1>
-              <p> 
-                <!-- TODO: add icon -->
-                Author: <span class="author">J. R. R Tolkin</span></p>
-              <p><!-- TODO: add icon -->
-                Genre: <span class="genre">High Fantasy</span></p>
-              <p><!-- TODO: add icon -->
-                Pages: <span class="pages">310</spancla></p>
-              <p><!-- TODO: add icon -->
-                Published: <span class="published">1937</span></p>
+              <div class="content-desc">
+                <p> 
+                  <!-- TODO: add icon -->
+                  Author: <span class="author">J. R. R Tolkin</span></p>
+                <p><!-- TODO: add icon -->
+                  Genre: <span class="genre">High Fantasy</span></p>
+                <p><!-- TODO: add icon -->
+                  Pages: <span class="pages">310</spancla></p>
+                <p><!-- TODO: add icon -->
+                  Published: <span class="published">1937</span></p>
+              </div>
+                <div class="content-btns">
+                  <button data-remove>
+                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M17 4V10L15 8L13 10V4H9V20H12.1C12.2 20.7 12.5 21.4 12.8 22H7C5.9 22 5 21 5 20V19H3V17H5V13H3V11H5V7H3V5H5V4C5 2.9 5.9 2 7 2H19C20 2 21 3 21 4V13.8C20.4 13.4 19.7 13.2 19 13.1V4H17M5 19H7V17H5V19M5 13H7V11H5V13M5 7H7V5H5V7M20.1 15.5L18 17.6L15.9 15.5L14.5 16.9L16.6 19L14.5 21.1L15.9 22.5L18 20.4L20.1 22.5L21.5 21.1L19.4 19L21.5 16.9L20.1 15.5Z" />
+                    </svg>
+                  </button>
+                  <button data-reading>
+                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M19 1L14 6V17L19 12.5V1M21 5V18.5C19.9 18.15 18.7 18 17.5 18C15.8 18 13.35 18.65 12 19.5V6C10.55 4.9 8.45 4.5 6.5 4.5C4.55 4.5 2.45 4.9 1 6V20.65C1 20.9 1.25 21.15 1.5 21.15C1.6 21.15 1.65 21.1 1.75 21.1C3.1 20.45 5.05 20 6.5 20C8.45 20 10.55 20.4 12 21.5C13.35 20.65 15.8 20 17.5 20C19.15 20 20.85 20.3 22.25 21.05C22.35 21.1 22.4 21.1 22.5 21.1C22.75 21.1 23 20.85 23 20.6V6C22.4 5.55 21.75 5.25 21 5M10 18.41C8.75 18.09 7.5 18 6.5 18C5.44 18 4.18 18.19 3 18.5V7.13C3.91 6.73 5.14 6.5 6.5 6.5C7.86 6.5 9.09 6.73 10 7.13V18.41Z" />
+                    </svg>
+                  </button>
+                </div>
             </div>
 
             <div class="content">
